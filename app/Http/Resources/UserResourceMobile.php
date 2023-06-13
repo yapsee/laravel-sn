@@ -14,6 +14,11 @@ class UserResourceMobile extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            "id"=> $this->id, 
+            "nomComplet"=> $this->nom ."  ". $this->prenom    
+        ];
     }
 }
+
+// This is a DTO want to provide to our web frontend developer

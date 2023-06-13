@@ -7,13 +7,18 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserResourceWeb extends JsonResource
 {
-    /**
+    /** 
      * Transform the resource into an array.
      *
      * @return array<string, mixed>
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+         return [
+            "id"=> $this->id, 
+            "nom"=> $this->nom ,
+            "prenom "=>$this->prenom    
+        ];;
     }
 }
+// This is a DTO want to provide to our flutter developer
