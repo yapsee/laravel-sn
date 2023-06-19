@@ -17,7 +17,8 @@ class UserResourceWeb extends JsonResource
          return [
             "id"=> $this->id, 
             "nom"=> $this->nom ,
-            "prenom "=>$this->prenom    
+            "prenom "=>$this->prenom,
+            "email "=> $this->email    
         ];;
     }
 }

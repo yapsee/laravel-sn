@@ -18,7 +18,7 @@ class UserController extends Controller
     public function index()
     {
         //return User::all();
-        return response(UserResourceWeb::collection(User::paginate(35)),Response::HTTP_OK);
+        return response(["data" => UserResourceWeb::collection(User::paginate(5))],Response::HTTP_OK);
     }
 
     /**
